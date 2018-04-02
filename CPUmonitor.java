@@ -46,7 +46,7 @@ public class CPUmonitor {
 	 * Searches for available CPU. At this point, the job has already secured a
 	 * spot, but it now needs to look for a SPECIFIC CPU to use, so it scans the
 	 * array for one. Method is synchronized, because there is concurrent access
-	 * to the isAvailable[] array.
+	 * to the CPUs[] array.
 	 */
 	public synchronized void allocateCPU(UserJob j) {
 		
@@ -60,7 +60,7 @@ public class CPUmonitor {
 
 	/*
 	 * Releases CPU position from array. Method is synchronized, because there
-	 * is concurrent access to the isAvailable[] array.
+	 * is concurrent access to the CPUs[] array.
 	 */
 	public synchronized void deallocateCPU(UserJob j) {
 		
